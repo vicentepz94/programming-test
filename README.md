@@ -9,4 +9,19 @@ Comentarios y supuestos.
      'Fizz' o 'Buzz' dentro de la variable.
   e) en la evaluación del múltiplo de 5 agregamos una concatenacion a "output" con " += "Buzz" " en caso de que el número también haya sido multiplo
      de 3 previamente, solo concatenamos "Buzz".
-  f) ahora solo queda imprimir la variable output o en su defecto x (el número iterador) 
+  f) ahora solo queda imprimir la variable output o en su defecto x (el número iterador)
+
+
+2) ORM
+   a) 
+
+
+3) Indexing de multiniveles
+   a) para este ejercicio, dentro de la funcion 'multilevel_index', inicié la variable de tipo diccionario'index = {}' con el fin de almacenar los datos e inicialicé la variable iLevel para almacenar el nivel de index.
+   b) generé un ciclo principal for para iterar por cada diccionario de la lista 'documents'.
+   c) luego iteré las 'keys' por cada 'document' almacenando el valor de 'key' en la variable 'value'.
+   d) luego utilice el condicional if para evaluar si la variable 'value' no se encuentra en 'iLevel', de no encontrarla la asigno como primer nivel del diccinario a iLevel.
+   e) para evaluar el segundo elemento dentro de la lista del argumento 'keys' y asi agregarla como segundo nivel del diccionario, utilicé un if con el valor de indice de lista 'keys[-1]' para verificarr si ya existia dentro del iLevel, de no ser asi asignarla como valor clave con un valor de lista vacio.
+   f) luego a este valor le agregué el contenido de document con el metodo de lista 'append' y finalmente imprimí la variable index.
+
+   
