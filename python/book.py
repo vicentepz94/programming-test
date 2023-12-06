@@ -36,7 +36,7 @@ class Book(SQL):
 
         def save(self):
             self.id = SQL.seq
-            self.create('books', self.title, self.author, self.description)
+            super().create('books', self.title, self.author, self.description)
 
         def update_book(self, record_id, title, author, description):
             super().update(record_id, 'books', title, author, description)
@@ -47,10 +47,13 @@ class Book(SQL):
         def delete(self):
             super().delete(self.id,'books')
             del self
+
         def list(self):
-            self.list
+            super().list('books')
+
         def get(self):
-            self.retrieve
+            self.retrieve('books')
+
         def __str__(self):
             return f'Title= {self.title}, Author= {self.author}, Description= {self.description}, ID= {self.id}'
 
@@ -78,6 +81,8 @@ print(book_1)
 
 #eliminando libro 3
 book_3.delete()
+
+
 
 
 
